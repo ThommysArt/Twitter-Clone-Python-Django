@@ -1,0 +1,78 @@
+body{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+    z-index: 1;
+    overflow-x: hidden;
+}
+
+body .flash{
+    position: absolute;
+    display: flex;
+    padding: 7px;
+    top: 0%;
+    width: 100%;
+    height: 20px;
+    background-color: #e9e9e9c4;
+    color: black;
+    border: 1px solid #cecece;
+    backdrop-filter: blur(5px);
+}
+body .flash ul{
+    list-style: none;
+}
+
+body .menu{
+    position: fixed;
+    width: 25%;
+    height: 100vh;
+    border-right: 1px solid #fff;
+    float: left;
+}
+
+body .menu ul{
+    list-style: none;
+}
+
+body .menu ul li div{
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+}
+body .menu ul li div:hover{
+    background-color: #232a2c;
+}
+
+
+body .menu .account{
+    bottom: 0%;
+    background-color: #1d1d1d;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+}
+
+body .menu .account:hover{
+    background-color: #484848;
+}
+
+body .menu .account img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    left: 0%;
+}
+
+body .menu .account span{
+    color: #767676;
+}
+
+body .menu .account span,
+body .menu .account h4{
+    position: relative;
+    margin: 5px;
+    width: 100%;
+    bottom: 0%;
+}
+
+

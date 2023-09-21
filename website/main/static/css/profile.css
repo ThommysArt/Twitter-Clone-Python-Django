@@ -1,0 +1,30 @@
+
+body .content .top .btn{
+    border-radius: 10px;
+    border: none;
+    background-color: #00aede;
+    color: #fff;
+    padding: 10px;
+    margin: 10px;
+}
+body .content .top .btn:hover{
+    animation: colorfade 1s ease-in-out forwards;
+}
+@keyframes colorfade {
+    0%{
+        background-color: #46b7d6;
+        color: #cccccc;
+        border: 1px solid #0088ad;
+    }
+    50%{
+        background-color: #82b2d0;
+        color: #454545;
+        border: 1px solid #00395d;
+    }
+    100%{
+        background-color: #cdd4de;
+        color: #000000;
+        border: 1px solid #bfe2f7;
+    }
+    
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <link rel="stylesheet" href="{% static 'css/tweet.css' %}">
+    <link rel="stylesheet" href="{% static 'css/profile.css' %}">
+    <link rel="stylesheet" href="{% static 'css/edit_profile.css' %}">
+    <link rel="stylesheet" href="{% static 'css/popup.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'icons/icons8_twitter_30px_1.png' %}">
+    <title>{% block title %}Twitter clone{% endblock %}</title>
+</head>
+<body>
+    {% if messages %}
+        <div id="popup" class="mypopup">
+            <ul class="messages">
+            {% for message in messages %}
+                <li {% if message.tags %} class="{{message.tags}}" {% endif %} style="font-size: 20px;">{{ message }}</li>
+            {% endfor %}
+            </ul>
+        </div>
+    {% endif %}
+    <section class="menu">
+        <ul>
+            <li>
+                <div onclick="location.href='home'"><img src="{% static 'icons/icons8_home_26px_1.png' %}" alt="home" class="home"><label>   Home</label></div>
+            </li>
+            <li>
+                <div><img src="{% static 'icons/icons8_search_26px.png' %}" alt="search" class="explore"><label>   Explore</label></div>
+            </li>
+            <li>
+                <div onclick="location.href='tweet'"><img src="{% static 'icons/icons8_twitter_26px_1.png' %}" alt="twitter" class="tweet"><label>   Tweet</label></div>
+            </li>
+            <li>
+                <div><img src="{% static 'icons/icons8_notification_26px.png' %}" alt="notifications" class="notifications"><label>   Notifications</label></div>
+            </li>
+            <li>
+                <div><img src="{% static 'icons/icons8_settings_26px_1.png' %}" class="settings"><label>   Settings</label></div>
+            </li>
+            <li>
+                <div onclick="location.href='logout'"><img src="{% static 'icons/icons8_sign_out_26px.png' %}" alt="sign out" class="logout"><label>   Logout</label></div>
+            </li>
+        </ul>
+        <div class="account" onclick="location.href='profile?user={{user}}'">
+            {% load static %}
+            <img src="{% static 'media/no-profile-picture-4-1024x1024.jpg' %}" alt="profile-pic">
+            <h4>{{ user.username }}</h4>
+            <span>{{ user.email }}</span>
+        </div>
+    </section>
+    <section class="content">
+        <div class="top">
+        <h3>{% block header %}Home{% endblock %}</h3>
+        </div>
+        {% block content %}{% endblock %}
+    </section>
+</body>
+
+<script>
+	function myfunction(){
+		closePopup.addEventListener("click", function () {
+		    myPopup.classList.remove("show");
+		});
+		window.addEventListener("click", function (event) {
+		    if (event.target == myPopup) {
+		        myPopup.classList.remove("show");
+		    }
+		});
+        };
+</script>
+</html>

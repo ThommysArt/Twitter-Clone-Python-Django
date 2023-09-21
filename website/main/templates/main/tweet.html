@@ -1,0 +1,17 @@
+{% extends 'main/base.html' %}
+
+{% block title %}Twitter clone | Tweet{% endblock %}
+
+{% block header %}Create Tweet{% endblock %}
+
+{% block content %}
+
+
+<form class="create-post" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <label>Tweet</label><textarea type="text" name="tweet-txt" id="tweet-txt"></textarea><br/>
+    <input type="file" name="tweet-img" id="tweet-img"><br/>
+    <button type="submit">Tweet</button>
+</form>
+
+{% endblock %}

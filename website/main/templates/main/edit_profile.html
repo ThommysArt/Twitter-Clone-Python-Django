@@ -1,0 +1,58 @@
+{% extends 'main/base.html' %}
+{% block title %}Twitter Clone | Profile{% endblock %}
+
+{% block header %}Edit Profile{% endblock %}
+
+{% block content %}
+<form class="change-profile" action="">
+    <h3>Change Username</h3>
+    <div>
+        <div class="info-input">
+            <label class="label">Change Username</label>
+            <input type="text" name="username" id="username">
+        </div>
+    </div>
+    <button type="submit" class="btn">Submit</button>
+</form>
+
+<form class="change-profile">
+    <h3>Change Password</h3>
+    <div>
+        <div class="info-input">
+            <label class="label">Old password</label>
+            <input type="text" name="old-pwd" id="old-pwd">
+        </div>
+    </div>
+    <div>
+        <div class="info-input">
+            <label class="label">New password</label>
+            <input type="text" name="new-pwd" id="new-pwd">
+        </div>
+    </div>
+    <div>
+        <div class="info-input">
+            <label class="label">Confirm password</label>
+            <input type="text" name="new-pwd" id="new-pwd">
+        </div>
+    </div>
+    <button type="submit" class="btn">Submit</button>
+</form>
+
+<form class="change-profile">
+    <h3>Change Profile picture</h3>
+    <div>
+        <input type="file" name="pp" id="pp">
+    </div>
+    <button type="submit" class="btn">Submit</button>
+</form>
+
+<form class="change-profile">
+    <h3>Change Bio</h3>
+    <div>
+        <textarea name="bio" id="bio"></textarea>
+    </div>
+    <button class="btn" type="submit">Submit</button>
+</form>
+
+
+{% endblock %}

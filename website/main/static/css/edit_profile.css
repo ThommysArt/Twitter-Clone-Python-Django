@@ -1,0 +1,64 @@
+
+body .content .change-profile{
+    border-bottom: 1px solid #fff;
+}
+
+body .content .change-profile .info-input{
+    position: relative;
+}
+
+body .content .change-profile .info-input input{
+    width: 90%;
+    padding: 10px;
+    margin: 10px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    border: none;
+    align-self: center;
+    background-color: #484848;
+    color: #fff;
+}
+
+body .content .change-profile .info-input label{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    color: #c2c2c2
+}
+
+body .content .change-profile .info-input input:focus ~ label,
+body .content .change-profile .info-input input:valid ~ label{
+    top: -10px;
+    font-size: 12px;
+    color: #000;
+}
+body .content .change-profile input[type='file']::file-selector-button,
+body .content .change-profile .btn{
+    position: relative;
+    width: 40%;
+    height: 30px;
+    margin: 5px;
+    align-self: right;
+    color: #000;
+    background-color: #00aede;
+    border-radius: 7px;
+    border: none;
+}
+body .content .change-profile input[type='file']::file-selector-button:hover,
+body .content .change-profile .btn:hover{
+    background-color: #6ba0b0;
+    color: #000000;
+    border: 1px solid #000000;
+}
+
+body .content .change-profile textarea{
+    width: 90%;
+    height: 80px;
+    align-self: center;
+    border: none;
+    padding: 10px;
+    border-radius: 7px;
+    background-color: #484848;
+    color: #fff;
+}

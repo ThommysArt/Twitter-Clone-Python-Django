@@ -1,0 +1,18 @@
+{% extends 'main/base.html' %}
+{% block title %}Twitter Clone | Profile{% endblock %}
+
+{% block header %}Profile{% endblock %}
+
+{% block content %}
+<div class="top">
+    <img class="profile-pic" src="{{ profile.pic }}" alt="media/no-profile-picture-4-1024x1024.jpg">
+    <button class="btn" onclick="location.href='edit_profile'">Edit Profile</button>
+</div>
+<div class="middle">
+    <h3>{{ user.username }}</h3>
+    <span>{{ user.email }}</span>
+</div>
+<div class="bottom">
+    <p>{{ profile.bio }}</p>
+</div>
+{% endblock %}

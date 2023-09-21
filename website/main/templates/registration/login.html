@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    <link rel="stylesheet" href="{% static 'css/popup.css' %}">
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'icons/icons8_twitter_26px_1.png' %}">
+    <title>{% block title %}Twitter clone | Login{% endblock %}</title>
+</head>
+<body>
+    {% if messages %}
+        <div id="mypopup" class="mypopup">
+            <ul class="messages">
+            {% for message in messages %}
+                <li {% if message.tags %} class="{{message.tags}}" {% endif %}">{{ message }}</li>
+            {% endfor %}
+            </ul>
+        </div>
+    {% endif %}
+    <div class="main">
+    {% block content %}
+        <form method="post">
+            {% csrf_token %}
+            <h3 class="title">Login</h3>
+            <div class="user-box">
+                <input type="text" name="email" id="email" required="required">
+                <label>Email</label>
+            </div>
+            <div class="user-box">
+                <input type="password" name="password" id="password" required="required">
+                <label>Password</label>
+            </div>
+            <button type="submit" class="btn">Login</button>
+            <p>Don't have an account, <a href="/sign_up">Sign Up</a></p>
+        </form>
+    {% endblock %}
+    </div>
+</body>
+
+<script>
+	function myfunction(){
+		closePopup.addEventListener("click", function () {
+		    myPopup.classList.remove("show");
+		});
+		window.addEventListener("click", function (event) {
+		    if (event.target == myPopup) {
+		        myPopup.classList.remove("show");
+		    }
+		});
+        };
+</script>
+</html>

@@ -1,0 +1,52 @@
+
+
+body .content .create-post{
+    padding: 10px;
+}
+
+body .content .create-post textarea{
+    padding: 10px;
+    border-radius: 15px;
+    width: 95%;
+    min-height: 100px;
+    background-color: #000;
+    color: #fff;
+}
+
+body .content .create-post input[type='file']::file-selector-button,
+body .content .create-post button{
+    border-radius: 10px;
+    border: none;
+    background-color: #00aede;
+    color: #fff;
+    padding: 10px;
+    margin: 10px;
+}
+
+body .content .create-post button{
+    left: 50%;
+    width: 80px;
+}
+
+body .content .create-post input[type='file']::file-selector-button:hover,
+body .content .create-post button:hover{
+    animation: colourfade 1s ease-in-out forwards;
+}
+@keyframes colourfade {
+    0%{
+        background-color: #46b7d6;
+        color: #cccccc;
+        border: 1px solid #0088ad;
+    }
+    50%{
+        background-color: #82b2d0;
+        color: #454545;
+        border: 1px solid #00395d;
+    }
+    100%{
+        background-color: #cdd4de;
+        color: #000000;
+        border: 1px solid #bfe2f7;
+    }
+    
+}
